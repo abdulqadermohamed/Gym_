@@ -1,0 +1,672 @@
+﻿@model IEnumerable<Gym_.Data.Subscription>
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />*@
+
+
+
+
+    <!-- Stylesheets -->
+    <link href="~/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="~/assets/css/style.css" rel="stylesheet">
+    <link href="~/assets/css/responsive.css" rel="stylesheet">
+    <!-- Color Switcher Mockup -->
+    <link href="~/assets/css/color-switcher-design.css" rel="stylesheet">
+    <link rel="shortcut icon" href="~/assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="~/assets/images/favicon.png" type="image/x-icon">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+<body class="hidden-bar-wrapper">
+
+
+
+    <div class="page-wrapper">
+
+
+
+        <!-- Preloader -->
+
+        <div class="preloader"></div>
+
+
+
+        <!-- Main Header-->
+
+        <header class="main-header header-style-three">
+
+
+
+            <!-- Header Top -->
+
+            <div class="header-top">
+
+                <div class="auto-container">
+
+                    <div class="clearfix">
+
+
+
+                        <!-- Top Left -->
+
+                        <div class="top-left pull-left">
+
+                            <!-- Info List -->
+
+                           
+
+                        </div>
+
+
+
+                        <!-- Top Right -->
+
+                        <div class="top-right pull-right">
+
+
+
+                            <!--Language-->
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Header Upper -->
+
+            <div class="header-upper">
+
+                <div class="auto-container clearfix">
+
+
+
+                    <div class="pull-left logo-box">
+
+                        <div class="logo"><a asp-area="" asp-controller="Home" asp-action="Index"><img src="~/assets/images/logo-2.png" alt="" title=""></a></div>
+
+                    </div>
+
+
+
+                    <div class="nav-outer clearfix">
+
+                        <!--Mobile Navigation Toggler-->
+
+                        <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
+
+                        <!-- Main Menu -->
+
+                        <nav class="main-menu navbar-expand-md">
+
+                            <div class="navbar-header">
+
+                                <!-- Toggle Button -->
+
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+                                    <span class="icon-bar"></span>
+
+                                    <span class="icon-bar"></span>
+
+                                    <span class="icon-bar"></span>
+
+                                </button>
+
+                            </div>
+
+
+
+                            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+
+                                <ul class="navigation clearfix">
+
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="reserve">Reservation</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                                   
+
+                                </ul>
+
+                            </div>
+
+                        </nav>
+
+
+
+                        <!-- Main Menu End-->
+
+                        <div class="outer-box clearfix">
+
+
+
+
+
+                            <!-- Search Btn -->
+
+                            <div class="search-box-btn search-box-outer"><span class="icon fa fa-search"></span></div>
+
+
+
+                            <!-- Quote Btn -->
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            <!--End Header Upper-->
+            <!-- Sticky Header  -->
+
+            <div class="sticky-header">
+
+                <div class="auto-container clearfix">
+
+                    <!--Logo-->
+
+                    <div class="logo pull-left">
+
+                        <a href="index-2.html" title=""><img src="~/assets/images/logo-small.png" alt="" title=""></a>
+
+                    </div>
+
+                    <!--Right Col-->
+
+                    <div class="pull-right">
+
+                        <!-- Main Menu -->
+
+                        <nav class="main-menu">
+
+                            <!--Keep This Empty / Menu will come through Javascript-->
+
+                        </nav><!-- Main Menu End-->
+                        <!-- Main Menu End-->
+
+                        <div class="outer-box clearfix">
+
+
+
+
+
+                            <!-- Search Btn -->
+
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div><!-- End Sticky Menu -->
+            <!-- Mobile Menu  -->
+
+            <div class="mobile-menu">
+
+                <div class="menu-backdrop"></div>
+
+                <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
+
+
+
+                <nav class="menu-box">
+
+                    <div class="nav-logo"><a href="index-2.html"><img src="~/assets/images/logo-2.png" alt="" title=""></a></div>
+
+                    <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+
+                </nav>
+
+            </div><!-- End Mobile Menu -->
+
+
+
+        </header>
+
+        <!-- End Main Header -->
+        <!--Page Title-->
+        <section class="page-title" style="background-image:url(/assets/images/background/11.jpg)">
+            <div class="auto-container">
+                <div class="clearfix">
+                    <div class="pull-left">
+                        <h2>Admin</h2>
+                        <div class="text">Fitness is not a destination it is a way of life.</div>
+                    </div>
+                    <div class="pull-right">
+                        <ul class="page-breadcrumb">
+                            <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+
+                            <li>Admin</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--End Page Title-->
+        <!--Cart Section-->
+        <section class="cart-section">
+            <div class="auto-container">
+                <div class="text-left mb-2"><a class="theme-btn checkout-btn text-white" asp-action="Create">Create Newt</a></div>
+
+                <!--Cart Outer-->
+                <div class="cart-outer">
+                    <div class="table-outer">
+
+
+
+
+
+
+                        <table class="table cart-table">
+                            <thead class="cart-header">
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Name)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Description)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Price)
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Name)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Description)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Price)
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+                                            <a class="btn btn-success mr-2 ml-2" asp-action="Details" asp-route-id="@item.Id">Details</a> 
+                                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+
+
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+        <!-- Main Footer -->
+
+        <footer class="main-footer style-three">
+
+            <div class="boxed-pattern-layer" style="background-image: url(~/assets/images/background/pattern-10.png)"></div>
+
+            <div class="auto-container">
+
+                <!-- Widgets Section -->
+
+                <div class="widgets-section">
+
+                    <div class="row clearfix">
+
+
+
+                        <!-- Big Column -->
+
+                        <div class="big-column col-lg-6 col-md-12 col-sm-12">
+
+                            <div class="row clearfix">
+
+
+
+                                <!--Footer Column-->
+
+                                <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+
+                                    <div class="footer-widget logo-widget">
+
+                                        <div class="logo">
+
+                                            <a href="index-2.html"><img src="~/assets/images/footer-logo.png" alt="" /></a>
+
+                                        </div>
+
+                                        <ul class="footer-info-list">
+
+                                            <li><span class="icon fa fa-location-arrow"></span>27 Division St, New York, <br> United State Aamrica</li>
+
+                                            <li><span class="icon fa fa-phone"></span><a href="tel:+1-044-123-456-789">+1 (044) 123 456 789</a></li>
+
+                                            <li><span class="icon fa fa-envelope-o"></span><a href="mailto:info@example.com">info@example.com</a></li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Footer Column -->
+
+                                <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+
+                                    <div class="footer-widget links-widget">
+
+                                        <h4>Useful Links</h4>
+
+                                        <ul class="list-link">
+
+                                            <li><a href="#">Terms and Conditions</a></li>
+
+                                            <li><a href="#">Privacy Policy</a></li>
+
+                                            <li><a href="#">Cookie Policy & Date Protection</a></li>
+
+                                            <li><a href="#">Complaints Policy</a></li>
+
+                                            <li><a href="#">TimeTable Maniged</a></li>
+
+                                            <li><a href="#">Update News</a></li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Big Column -->
+
+                        <div class="big-column col-lg-6 col-md-12 col-sm-12">
+
+                            <div class="row clearfix">
+
+
+
+                                <!-- Footer Column -->
+
+                                <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+
+                                    <div class="footer-widget links-widget">
+
+                                        <h4>Our Services</h4>
+
+                                        <ul class="list-link">
+
+                                            <li><a href="#">Fat Burn</a></li>
+
+                                            <li><a href="#">Streching</a></li>
+
+                                            <li><a href="#">Weight Loss</a></li>
+
+                                            <li><a href="#">Self Defense</a></li>
+
+                                            <li><a href="#">Body Building</a></li>
+
+                                            <li><a href="#">Psycho Trainning</a></li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <!-- Footer Column -->
+
+                                <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+
+                                    <div class="footer-widget consult-widget">
+
+                                        <h4>Free Consultation</h4>
+
+                                        <div class="phone"><span class="icon fa fa-phone"></span> 1-800-643-430</div>
+
+                                        <div class="text">Power GYM lift is champ in providing its users with absolutely everything a fitness or gym site needs.</div>
+
+                                        <div class="social-links">
+
+                                            <a href="#" class="fa fa-facebook"></a>
+
+                                            <a href="#" class="fa fa-twitter"></a>
+
+                                            <a href="#" class="fa fa-instagram"></a>
+
+                                            <a href="#" class="fa fa-linkedin"></a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Footer Bottom -->
+
+                <div class="footer-bottom">
+
+                    <div class="copyright">&copy; 2022 - Gym_ - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></div>
+
+                </div>
+
+
+
+            </div>
+
+        </footer>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Search Popup -->
+
+    <div class="search-popup">
+
+        <button class="close-search style-two"><span class="flaticon-multiply"></span></button>
+
+        <button class="close-search"><span class="flaticon-up-arrow-1"></span></button>
+
+        <form method="post" action="#">
+
+            <div class="form-group">
+
+                <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+
+                <button type="submit"><i class="fa fa-search"></i></button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- End Header Search -->
+    <!--Scroll to top-->
+
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+
+
+
+    <script src="~/assets/js/jquery.js"></script>
+    <script src="~/assets/js/popper.min.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="~/assets/js/jquery.fancybox.js"></script>
+    <script src="~/assets/js/appear.js"></script>
+    <script src="~/assets/js/parallax.min.js"></script>
+    <script src="~/assets/js/tilt.jquery.min.js"></script>
+    <script src="~/assets/js/jquery.paroller.min.js"></script>
+    <script src="~/assets/js/owl.js"></script>
+    <script src="~/assets/js/wow.js"></script>
+    <script src="~/assets/js/nav-tool.js"></script>
+    <script src="~/assets/js/jquery-ui.js"></script>
+    <script src="~/assets/js/color-settings.js"></script>
+    <script src="~/assets/js/script.js"></script>
+    <!--Google Map APi Key-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIJ_QKHN-bi6_1C9f5eYE3pZs1zhQIo5o"></script>
+    <script src="~/assets/js/map-script.js"></script>
+    <!--End Google Map APi-->
+    @*@RenderSection("Scripts", required: false)*@
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
